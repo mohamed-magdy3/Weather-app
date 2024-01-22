@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+   
+    <div class="container" id="app" >
+        <marquee behavior="smooth" direction="left">Weather prediction and meteorological analysis contribute significantly towards sustainable development to reduce the damage from extreme events which could otherwise set-back the progress in development by years. The change in surface temperature is one of the important indicators in detecting climate change.</marquee>
+
+        <h1 class="text-center pt-5 text-light" data-aos="fade-down" data-aos-duration="1500"     data-aos-once="false"
+        >The Weather</h1>
+        <form class="col-md-6 m-auto py-5" data-aos="fade-right" data-aos-duration="1500">
+            <div class="input-group mb-3">
+                <input id="city-name" type="text" class="form-control" placeholder="location">
+                <div class="input-group-append">
+                    <button onclick="searchTemperature()" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="weather-status text-white text-center" data-aos="flip-left"  data-aos-duration="2500"  >
+            <img id="image-icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="city">--</h1>
+            <h1><span id="temp">--</span>&deg;C</h1>
+            <h1 class="lead" id="weather">--</h1>
+            <div class="d-flex details">
+                <div class="real_feel">
+                    <span id="real-feel">Real feel</span>
+                    <!-- <h1 id="real">--</h1> -->
+                    <h1><span id="real">--</span>&deg;C</h1>
+                </div>
+                <div class="">
+                    <div class="humid-pic ">
+                        <img src="./humidity.png" alt="" srcset="" id="h-pic">
+                        <span id="humidity">Humidity:</span>
+                    </div>
+                    <div class="humid">
+                        <h1><span id="humid">--</span>&deg;%</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>
